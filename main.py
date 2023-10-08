@@ -26,7 +26,6 @@ def process_frame(frame):
     eye_frame_gray = eye_frame_gray / 255.0 
     eye_prediction = eye_model.predict(np.expand_dims(eye_frame_gray, axis=0))[0][0]
 
-    print(eye_prediction)
     if eye_prediction > 0.5:
         cv2.putText(frame, "Eyes Closed", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     else:
