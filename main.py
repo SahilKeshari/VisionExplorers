@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 
 
-model_path = 'drowsiness.h5'  
+model_path = 'drowiness_new6.h5'  
 model = tf.keras.models.load_model(model_path)
 
 eye_model_path = 'eyeModel.h5'  
